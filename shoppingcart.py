@@ -6,6 +6,12 @@ class Shopping_cart:
 
     def __init__(self, shopping_cart_products_passed_in, empty_products_from_shopping_cart_passed_in, new_product_passed_in, product_total_passed_in):
         self.shopping_cart = shopping_cart_products_passed_in
-        self.total += product_total_passed_in
+        self.total = product_total_passed_in
         self.new_product = new_product_passed_in
         self.empty_products = empty_products_from_shopping_cart_passed_in
+
+    def put_product_total(self, product_total):
+        self.total += product_total
+
+    def take_product_out(self, product_total):
+        self.total -= product_total
